@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Firebase Auth</title>
+</head>
+<body class="blue-grey darken-3">
+  <nav class="z-depth-0 blue-grey darken-4">
+    <div class="nav-wrapper container">
+      <a href="#"><img src="img/logo.svg" class="logo"></a>
+
+      <ul data-js="nav-ul" class="right hide-on-med-and-down">
+        <li data-js="logged-in" class="hide">
+          <a href="#" class="blue-grey-text modal-trigger" data-target="modal-add-phrase">Adicionar frase</a>
+        </li>
+
+        <li data-js="logged-in" class="hide">
+          <a data-js="account-link" href="#" class="blue-grey-text modal-trigger" data-target="modal-account">Conta</a>
+        </li>
+
+        <li data-js="logged-in" class="hide">
+          <a data-js="logout" href="#" class="blue-grey-text">Logout</a>
+        </li>
+
+        <li data-js="logged-out" class="hide">
+          <a href="#" class="blue-grey-text modal-trigger" data-target="modal-login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div data-js="modal-login" id="modal-login" class="modal blue-grey darken-4 blue-grey-text text-lighten-5">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <button data-js="button-form" class="btn red darken-1 z-depth-0">Entrar com Google</button>
+    </div>
+  </div>
+
+  <div id="modal-account" class="modal blue-grey darken-4 blue-grey-text text-lighten-5">
+    <div class="modal-content center-align">
+      <h4>Detalhes da conta</h4><br />
+      <div data-js="account-details"></div>
+    </div>
+  </div>
+
+  <div id="modal-add-phrase" class="modal blue-grey darken-4 blue-grey-text text-lighten-5">
+    <div class="modal-content">
+      <h4>Adicionar frase</h4><br />
+
+      <form data-js="add-phrase-form">
+        <div class="input-field">
+          <input class="blue-grey-text text-lighten-5" type="text" name="title" required>
+          <label for="title">Nome do filme</label>
+        </div>
+
+        <div class="input-field">
+          <input class="blue-grey-text text-lighten-5" name="phrase" type="text" required></input>
+          <label for="phrase">Frase</label>
+        </div>
+
+        <button class="btn red darken-1 z-depth-0">Adicionar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container phrases-container">
+    <ul data-js="phrases-list" class="collapsible z-depth-0 phrases"></ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
