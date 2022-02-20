@@ -13,9 +13,10 @@ para fazer este desafio:
 - [Materialize](https://materializecss.com/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
-Se sentir que precisa, você pode usar funcionalidades do Materialize. Isso 
-pode te fazer ganhar tempo, afinal o foco aqui é que você aprenda a implementar 
-a autenticação com o Firebase. 
+Eu não indicaria isso se você não estivesse nessa etapa, mas se sentir que 
+sabe o que está fazendo, você pode usar funcionalidades JavaScript do 
+Materialize. Isso pode te fazer ganhar tempo, afinal o foco aqui é que você 
+aprenda a implementar a autenticação com o Firebase. 
 
 ---
 
