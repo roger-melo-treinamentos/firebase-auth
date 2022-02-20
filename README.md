@@ -1,14 +1,17 @@
 ## Introdução
 
-Seu desafio agora será usar o sistema de autenticação do Firebase nesta 
-aplicação.
+Seu desafio agora será implementar uma feature nesta aplicação: a autenticação 
+do Firebase.
 
 Nas próximas aulas, eu mostrarei como autenticar através da conta do google. 
-Assim, não é necessário se preocupar com força de senha do usuário.
+Assim, não é necessário se preocupar com força de senha do usuário. Recomendo 
+que você faça o mesmo.
 
 ---
 
 ## O que você precisa fazer
+
+---
 
 ### Quando o usuário está deslogado
 
@@ -28,6 +31,8 @@ Ao clicar no botão `Entrar com Google`, o popup padrão do google deverá ser
 aberto para o usuário entrar com a conta do Google dele.
 
 ![google-popup](https://user-images.githubusercontent.com/29297788/154863492-4c33d340-eb91-4414-b979-75b00db06db6.jpg)
+
+---
 
 ### Quando o usuário fizer login
 
@@ -57,6 +62,8 @@ Este modal contém o nome e o email do usuário logado na aplicação.
 
 Ao clicar em qualquer parte fora do modal acima, ele deve ser fechado.
 
+---
+
 ### Quando o usuário fizer logout
 
 Quando o link `Logout` for clicado, apenas o link `Login` deve ser exibido 
@@ -68,8 +75,8 @@ no navbar e "Faça login para ver as frases" deve ser exibida no centro da tela.
 
 ## Links
 
-Vou deixar abaixo os links das documentações que você precisará consultar 
-para fazer este desafio:
+Vou deixar abaixo os links das documentações nas quais você precisará 
+pesquisar para fazer este desafio:
 
 - [Firebase](https://firebase.google.com/docs)
 - [Materialize](https://materializecss.com/)
@@ -83,7 +90,8 @@ Eu não indicaria isso se você não estivesse nessa etapa, mas se sentir que
 sabe o que está fazendo, você pode usar funcionalidades JavaScript do 
 Materialize.
 
-Você já sabe como implementar modal (popup) e accordion com JS puro.
+Você já sabe como implementar modal (popup) e accordion com JS puro, já sabe 
+como isso funciona por baixo dos panos.
 
 Usar modal e accordion do Materialize pode te fazer ganhar tempo, afinal 
 o foco aqui é que você aprenda a implementar a autenticação com o Firebase. 
@@ -94,7 +102,34 @@ o foco aqui é que você aprenda a implementar a autenticação com o Firebase.
 
 Leia as dicas abaixo apenas se travar em algum ponto e precisar de ajuda.
 
+---
+
 ### Localhost
-The current domain is not authorized for OAuth operations
+
+Se ao clicar em "Entrar com Google" for exibida uma mensagem dizendo que 
+o seu domínio não está autorizado para operações de autenticação, dê uma 
+olhada em `Authorized domains`, na aba `Sign-in method` da tela 
+`Authentication` no console do Firebase, e também na aula 
+`Configurando o ambiente - Aula 01-03` da etapa 01.
+
+---
+
 ### Links invisíveis
-### Modais e Accordion
+
+Por padrão, todos os links estão com uma classe CSS `hide`, do Materialize.
+
+---
+
+### Modais
+
+Como os modais utilizados são os do Materialize, a exibição e fechamento deles 
+deve ser manipulada seguindo a documentação JavaScript dessa biblioteca.
+
+---
+
+### app.js
+
+O `app.js` já contém os `import` com a versão do Firebase que deve ser usada, 
+por que essa será a versão mostrada nas próximas aulas.
+
+Se quiser, você pode usar uma versão diferente depois.
