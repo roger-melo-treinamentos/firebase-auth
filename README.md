@@ -58,7 +58,7 @@ Quando o link `Conta` for clicado, o modal abaixo deve ser aberto.
 
 ![image](https://user-images.githubusercontent.com/29297788/154864384-924fdc8d-de79-41d1-a2b8-4c9267d528da.png)
 
-Este modal contém o nome e o email do usuário logado na aplicação. 
+Este modal deve conter o nome e o email do usuário logado na aplicação. 
 
 Ao clicar em qualquer parte fora do modal acima, ele deve ser fechado.
 
